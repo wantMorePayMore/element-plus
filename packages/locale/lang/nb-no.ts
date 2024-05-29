@@ -1,6 +1,9 @@
 export default {
   name: 'nb-no',
   el: {
+    breadcrumb: {
+      label: 'Breadcrumb', // to be translated
+    },
     colorpicker: {
       confirm: 'OK',
       clear: 'Tøm',
@@ -13,14 +16,14 @@ export default {
       confirm: 'OK',
       selectDate: 'Velg dato',
       selectTime: 'Velg tidspunkt',
-      startDate: 'Start Dato',
-      startTime: 'Start Tidspunkt',
+      startDate: 'Startdato',
+      startTime: 'Starttidspunkt',
       endDate: 'Sluttdato',
       endTime: 'Sluttidspunkt',
-      prevYear: 'Previous Year', // to be translated
-      nextYear: 'Next Year', // to be translated
-      prevMonth: 'Previous Month', // to be translated
-      nextMonth: 'Next Month', // to be translated
+      prevYear: 'I fjor',
+      nextYear: 'Neste år',
+      prevMonth: 'Forrige Måned',
+      nextMonth: 'Neste Måned',
       year: '',
       month1: 'Januar',
       month2: 'Februar',
@@ -34,7 +37,7 @@ export default {
       month10: 'Oktober',
       month11: 'November',
       month12: 'Desember',
-      // week: 'week',
+      week: 'uke',
       weeks: {
         sun: 'Søn',
         mon: 'Man',
@@ -61,21 +64,27 @@ export default {
     },
     select: {
       loading: 'Laster',
-      noMatch: 'Ingen samsvarende data',
-      noData: 'Ingen data',
+      noMatch: 'Ingen samsvarende resulater',
+      noData: 'Ingen resulater',
       placeholder: 'Velg',
     },
     cascader: {
-      noMatch: 'Ingen samsvarende data',
+      noMatch: 'Ingen samsvarende resultater',
       loading: 'Laster',
       placeholder: 'Velg',
-      noData: 'Ingen data',
+      noData: 'Ingen resultater',
     },
     pagination: {
       goto: 'Gå til',
       pagesize: '/side',
       total: 'Total {total}',
       pageClassifier: '',
+      page: 'Page', // to be translated
+      prev: 'Go to previous page', // to be translated
+      next: 'Go to next page', // to be translated
+      currentPage: 'page {pager}', // to be translated
+      prevPages: 'Previous {pager} pages', // to be translated
+      nextPages: 'Next {pager} pages', // to be translated
     },
     messagebox: {
       confirm: 'OK',
@@ -83,7 +92,7 @@ export default {
       error: 'Ugyldig input',
     },
     upload: {
-      deleteTip: 'press delete to remove', // to be translated
+      deleteTip: 'trykk på x for å slette',
       delete: 'Slett',
       preview: 'Forhåndsvisning',
       continue: 'Fortsett',
@@ -93,7 +102,7 @@ export default {
       confirmFilter: 'Bekreft',
       resetFilter: 'Tilbakestill',
       clearFilter: 'Alle',
-      sumText: 'Sum', // to be translated
+      sumText: 'Sum',
     },
     tree: {
       emptyText: 'Ingen Data',
@@ -101,20 +110,25 @@ export default {
     transfer: {
       noMatch: 'Ingen samsvarende data',
       noData: 'Ingen data',
-      titles: ['List 1', 'List 2'], // to be translated
-      filterPlaceholder: 'Enter keyword', // to be translated
-      noCheckedFormat: '{total} items', // to be translated
-      hasCheckedFormat: '{checked}/{total} checked', // to be translated
+      titles: ['Liste 1', 'Liste 2'],
+      filterPlaceholder: 'Skriv inn nøkkelord',
+      noCheckedFormat: '{total} gjenstander',
+      hasCheckedFormat: '{checked}/{total} valgt',
     },
     image: {
-      error: 'FAILED', // to be translated
+      error: 'FEILET',
     },
     pageHeader: {
-      title: 'Back', // to be translated
+      title: 'Tilbake',
     },
     popconfirm: {
-      confirmButtonText: 'Yes', // to be translated
-      cancelButtonText: 'No', // to be translated
+      confirmButtonText: 'Ja',
+      cancelButtonText: 'Nei',
+    },
+    carousel: {
+      leftArrow: 'Carousel arrow left', // to be translated
+      rightArrow: 'Carousel arrow right', // to be translated
+      indicator: 'Carousel switch to index {index}', // to be translated
     },
   },
 }

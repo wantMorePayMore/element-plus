@@ -1,22 +1,42 @@
-import { App } from 'vue'
+import { isArray, isObject, isString } from '@vue/shared'
+import { isNil } from 'lodash-unified'
 
-type OptionalKeys<T extends Record<string, unknown>> = {
-  [K in keyof T]: T extends Record<K, T[K]>
-    ? never
-    : K
-}[keyof T]
+export {
+  isArray,
+  isFunction,
+  isObject,
+  isString,
+  isDate,
+  isPromise,
+  isSymbol,
+} from '@vue/shared'
+export { isVNode } from 'vue'
 
-type RequiredKeys<T extends Record<string, unknown>> = Exclude<keyof T, OptionalKeys<T>>
+export const isUndefined = (val: any): val is undefined => val === undefined
+export const isBoolean = (val: any): val is boolean => typeof val === 'boolean'
+export const isNumber = (val: any): val is number => typeof val === 'number'
 
-type MonoArgEmitter<T, Keys extends keyof T> = <K extends Keys>(evt: K, arg?: T[K]) => void
+export const isEmpty = (val: unknown) =>
+  (!val && val !== 0) ||
+  (isArray(val) && val.length === 0) ||
+  (isObject(val) && !Object.keys(val).length)
 
-type BiArgEmitter<T, Keys extends keyof T> = <K extends Keys>(evt: K, arg: T[K]) => void
+export const isElement = (e: unknown): e is Element => {
+  if (typeof Element === 'undefined') return false
+  return e instanceof Element
+}
 
-export type EventEmitter<T extends Record<string, unknown>> =
-  MonoArgEmitter<T, OptionalKeys<T>> & BiArgEmitter<T, RequiredKeys<T>>
+export const isPropAbsent = (prop: unknown): prop is null | undefined => {
+  return isNil(prop)
+}
 
-export type AnyFunction<T> = (...args: any[]) => T
+export const isStringNumber = (val: string): boolean => {
+  if (!isString(val)) {
+    return false
+  }
+  return !Number.isNaN(Number(val))
+}
 
-export type PartialReturnType<T extends (...args: unknown[]) =>  unknown> = Partial<ReturnType<T>>
-
-export type SFCWithInstall<T> = T & { install(app: App): void; }
+export const isWindow = (val: unknown): val is Window => {
+  return val === window
+}

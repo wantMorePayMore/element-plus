@@ -1,6 +1,9 @@
 export default {
   name: 'ja',
   el: {
+    breadcrumb: {
+      label: 'Breadcrumb', // to be translated
+    },
     colorpicker: {
       confirm: 'OK',
       clear: 'クリア',
@@ -76,6 +79,12 @@ export default {
       pagesize: '件/ページ',
       total: '総計 {total} 件',
       pageClassifier: 'ページ目へ',
+      page: 'Page', // to be translated
+      prev: 'Go to previous page', // to be translated
+      next: 'Go to next page', // to be translated
+      currentPage: 'page {pager}', // to be translated
+      prevPages: 'Previous {pager} pages', // to be translated
+      nextPages: 'Next {pager} pages', // to be translated
     },
     messagebox: {
       title: 'メッセージ',
@@ -96,6 +105,11 @@ export default {
       clearFilter: 'すべて',
       sumText: '合計',
     },
+    tour: {
+      next: '次へ',
+      previous: '前へ',
+      finish: 'ツアー終了',
+    },
     tree: {
       emptyText: 'データなし',
     },
@@ -108,14 +122,19 @@ export default {
       hasCheckedFormat: '{checked}/{total} を選択した',
     },
     image: {
-      error: 'FAILED', // to be translated
+      error: '失敗',
     },
     pageHeader: {
-      title: 'Back', // to be translated
+      title: '戻る',
     },
     popconfirm: {
-      confirmButtonText: 'Yes', // to be translated
-      cancelButtonText: 'No', // to be translated
+      confirmButtonText: 'はい',
+      cancelButtonText: 'いいえ',
+    },
+    carousel: {
+      leftArrow: 'Carousel arrow left', // to be translated
+      rightArrow: 'Carousel arrow right', // to be translated
+      indicator: 'Carousel switch to index {index}', // to be translated
     },
   },
 }
